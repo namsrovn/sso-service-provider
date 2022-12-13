@@ -5,7 +5,7 @@ const logout = (req, res, next) => {
         const sessionToken = req.session.user.sessiontoken
         req.session.destroy()
         return res.redirect(
-            `https://identity-y4fy.onrender.com/cas/logout?sessionToken=${sessionToken}&serviceURL=https://${req.headers.host}`
+            `https://sso-identity-provider.onrender.com/cas/logout?sessionToken=${sessionToken}&serviceURL=https://${req.headers.host}`
         )
     }
     next()

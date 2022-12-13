@@ -3,7 +3,7 @@ const checkAuth = (req, res, next) => {
         // console.log(redirectURL, req.secure, req.headers.host)
     if (req.session.user === null || req.session.user === undefined) {
         return res.redirect(
-            `https://identity-y4fy.onrender.com/cas/login?serviceURL=${redirectURL}`
+            `https://sso-identity-provider.onrender.com/cas/login?serviceURL=${redirectURL}`
         )
     }
     return next()
